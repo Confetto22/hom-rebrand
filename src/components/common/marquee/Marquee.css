@@ -1,0 +1,32 @@
+.marquee {
+  width: 100%;
+  white-space: nowrap;
+  /* background-color: var(--bgColor); */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* border-radius: 7px; */
+  position: relative;
+  /* padding: .5rem 0; */
+  font-family: var(--second-font);
+}
+
+.marquee .marqueeList {
+  animation: marquee 40s linear infinite;
+}
+@media only screen and (min-width: 768px) {
+  .marquee .marqueeList {
+    animation: marquee 60s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-105%);
+  }
+}
